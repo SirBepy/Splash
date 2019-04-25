@@ -1,0 +1,248 @@
+/**
+ * @author: Josip Mužić, Jon Kojaković, Antonio Butigan
+ */
+
+/******************************
+********* MANDATORY ***********
+*******************************/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/******************************
+********** NAV-BAR ************
+*******************************/
+
+.navImg {
+    position: relative;
+    top: 0;
+    height: 2.6em;
+    transition: 0.2s;
+}
+
+.navImg:hover {
+    top: 8px;
+}
+
+@media only screen and (max-width: 990px) {
+    .navImg:hover {
+        transition: 0.2s;
+        top: 0px;
+        left: 8px;
+    }
+  }
+
+/******************************
+****** BACKGROUND-COLOR *******
+*******************************/
+
+.bg-blue {
+    background-color: #39A1CC;
+}
+
+.bg-darkblue {
+    background-color: #3B90B3;
+}
+
+.bg-red {
+    background-color: #FF617E;
+}
+
+.bg-darkred {
+    background-color: #B3324A;
+}
+
+.blue-btborder {
+    border-bottom: 10px solid #3B90B3;
+}
+
+.red-btborder {
+    border-bottom: 10px solid #B3324A;
+}
+
+/* If another color is necessary then yellow will be used */
+
+/* Yellow color is FFF87A */
+
+.red-border {
+    border: 2px solid #B3324A;
+}
+
+.border-radius {
+    border-radius: 10px;
+}
+
+/******************************
+************ FONTS ************
+*******************************/
+
+.jua, h1, h2 {
+    font-family: 'Jua', sans-serif;
+}
+
+.nanum-gothic {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.color-white {
+    color: white;
+}
+
+.fontsize-3em{
+    font-size: 5em;
+}
+
+/******************************
+********** PARALLAX ***********
+*******************************/
+
+/** 
+Every single time I want to do parallax I always use the same link, I've learnt everything by now but
+I will refference it anyway - Josip
+https://keithclark.co.uk/articles/pure-css-parallax-websites/ 
+*/
+
+/******************************
+******* HELPFULL ADDONS *******
+*******************************/
+
+.center-content {
+    text-align: center;
+}
+
+.centerbymargin {
+    margin: 0 auto;
+}
+
+.slide {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.nonselectable {
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+/**Taken from - https://stackoverflow.com/questions/6900124/how-to-make-certain-text-not-selectable-with-css*/
+
+/******************************
+****** HEIGHTS & WIDTHS *******
+*******************************/
+
+.height-12em {
+    height: 12em;
+}
+
+.height100 {
+    height: 100% !important;
+}
+
+.width-min10 {
+    min-width: 10em;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width60 {
+    width: 60%;
+}
+
+/******************************
+*********** MARGINS ***********
+*******************************/
+
+.margin0 {
+    margin: 0;
+}
+
+.margin-2em {
+    margin: 2em;
+}
+
+.margintop-3em {
+    margin-top: 3em;
+}
+
+.margintop-4em {
+    margin-top: 4em;
+}
+
+.margintop-5em {
+    margin-top: 5em;
+}
+
+.marginleft-6em {
+    margin-left: 6em;
+}
+
+.marginbottom-2em {
+    margin-bottom: 2em;
+}
+
+.marginbottom-4em {
+    margin-bottom: 4em;
+}
+
+/******************************
+********** PADDINGS ***********
+*******************************/
+
+.padding0 {
+    padding: 0;
+}
+
+.padding-1em {
+    padding: 1em;
+}
+
+.padding-2em {
+    padding: 2em;
+}
+
+.padding-4em {
+    padding: 4em;
+}
+
+.padding-10vw {
+    padding: 10vw;
+}
+
+.paddingtop-2em {
+    padding-top: 2em;
+}
+
+.paddingtop-5em {
+    padding-top: 5em;
+}
+
+.paddingtop-8em {
+    padding-top: 8em;
+}
+
+.paddingbot-30vh {
+    padding-bottom: 30vh;
+}
+.paddingbot-60vh {
+    padding-bottom: 60vh;
+}

@@ -1,0 +1,37 @@
+body {
+    font: 'Roboto', sans-serif !important;
+    color: #ddd !important;
+	background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/triviaimage.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	
+}
+
+.main{
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+ul{
+	margin:0 !important;
+	padding:0 !important;
+}
+
+.references{
+	margin-top: 5em;
+	line-height: 400%;
+	font-size: 125%;
+}
+
+
+.rubrics p{
+	font-size: 125%;
+	line-height: 200%;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	margin-bottom: 10vh;
+}

@@ -1,0 +1,174 @@
+.introanimation{
+    max-height: 20em;
+    -webkit-animation-name: introanimation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: introanimation;
+    animation-duration: 1s;
+}
+
+@keyframes introanimation {
+    0%   {opacity: 0;}
+    50%  {opacity: 0; height: 12em;}
+    80% {height: 23em;}
+    100% {opacity: 1; height: 20em;}
+}
+
+/**
+The following code is for the wave background animation
+the idea and most of the code inspiration came from
+https://codepen.io/plavookac/pen/QMwObb
+*/
+
+@keyframes waveanimation {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-30%) translateZ(0) scaleY(0.50)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+
+/**
+I didnt want to over-complicate things by making this entire thing upside down, so i just decided to do it 
+by flipping the entire wave
+*/
+.flip{
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Safari 3-8 */
+    transform: rotate(180deg);
+    overflow: hidden;
+}
+.waveContainer {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.bgTop, .bgMiddle, .bgBottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #3B90B3 20%, #101042 80%);
+}
+.bgTop {
+    z-index: -10;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: -15;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: -20;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+    background-image: url('../images/home/wave.png');
+
+}
+.waveAnimation .waveTop {
+    animation: waveanimation 18s linear infinite;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+    background-image: url('../images/home/wave.png');
+}
+.waveAnimation .waveMiddle {
+    animation: waveanimation 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+    background-image: url('../images/home/wave.png');
+}
+.waveAnimation .waveBottom {
+    animation: waveanimation 15s linear infinite;
+}
+
+/**
+This is for the magikarps swimming
+*/
+.magikarps{
+    position: absolute;
+    right: 0;
+    top: 0;
+    animation: swim 18s linear infinite;
+    height: 5em;
+    z-index: -1;
+}
+
+.magikarps img{
+    position: absolute;
+    width: 5em;
+    animation: wiggle 1s ease infinite;
+}
+
+.karp1 {
+    right: 0em;
+    top: 6.7em;
+}
+
+.karp2 {
+    right: 8em;
+    top: 6.4em;
+}
+
+.karp3 {
+    right: 14em;
+    top: 7.3em;
+}
+
+.karp4 {
+    right: 2em;
+    top: 3em;
+}
+
+.karp5 {
+    right: 8em;
+    top: 0em;
+}
+
+.karp6 {
+    right: 15em;
+    top: 2em;
+}
+
+.smaller-text{
+    font-size: 1.2vw !important;
+}
+
+@keyframes swim {
+	0% {right: -40vw}
+	80% {right: 110vw;}
+	100% {right: 110vw;}
+}
+
+  @keyframes wiggle {
+
+    0%, 100%{
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1em !important;
+    }
+  }

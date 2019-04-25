@@ -1,0 +1,116 @@
+/* Some code was taken from W3 Schools (Timeline)  */
+
+.timeline {
+	position: relative;
+	max-width: 1000px;
+}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	border-radius: 20px 20px 0 0;
+	background-color: rgb(0, 0, 0);
+}
+
+.box {
+	padding: 10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+}
+
+.box::after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: -16px;
+	background-color:black;
+	top: 19px;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.right::after {
+	left: -9px;
+}
+
+.left {
+	left: 0;
+}
+
+.right {
+	left: 50%;
+}
+
+/* left arrows */
+.left::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	right: 30px;
+	border: medium solid #B3324A;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent #B3324A;
+}
+
+/* right arrows */
+.right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	left: 30px;
+	border: medium solid #B3324A;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent #B3324A;
+}
+
+/* The content */
+
+.text {
+	padding: 20px 30px;
+	position: relative;
+	border-radius: 6px;
+}
+
+h2{
+	margin-bottom: 20px;
+}
+
+/* responsivenes using media queries */
+
+@media screen and (max-width: 600px) {
+	.timeline::after {
+		left: 31px;
+	}
+	/* boxes  */
+	.box {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	}
+	/* arrows */
+	.box::before {
+		left: 60px;
+		border: medium solid black;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent black transparent transparent;
+	}
+	/* circles */
+	.left::after, .right::after {
+		left: 15px;
+	}
+	.right {
+		left: 0%;
+	}
+}
